@@ -1,0 +1,36 @@
+name: captura-precios
+
+on:
+  schedule:
+    # cada 5 horas
+    - cron: "17 */5 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  capturar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Correr captura
+        run: python scraper/capture_snapshot.py
+
+      - name: Commitear snapshot
+        run: |
+          git config user.name "guardia-de-precios-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/precios.csv
+          git diff --cached --quiet && echo "sin cambios" || git commit -m "snapshot automatico $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

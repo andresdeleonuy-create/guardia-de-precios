@@ -1,28 +1,26 @@
 {
-  "sitio_base": "https://listado.mercadolibre.com.uy",
+  "sitio_base": "https://amvstore.com.uy",
   "objetivo_total_productos": 70,
   "categorias": [
-    { "nombre": "auriculares bluetooth", "query": "auriculares-bluetooth", "volatilidad": "alta", "cupo": 8 },
-    { "nombre": "parlantes", "query": "parlante-bluetooth", "volatilidad": "alta", "cupo": 8 },
-    { "nombre": "smartwatch", "query": "smartwatch", "volatilidad": "alta", "cupo": 8 },
-    { "nombre": "airfryer", "query": "airfryer", "volatilidad": "alta", "cupo": 6 },
-    { "nombre": "cafetera", "query": "cafetera", "volatilidad": "alta", "cupo": 6 },
-    { "nombre": "teclado mecanico", "query": "teclado-mecanico", "volatilidad": "alta", "cupo": 6 },
-    { "nombre": "monitor", "query": "monitor-pc", "volatilidad": "alta", "cupo": 6 },
-    { "nombre": "accesorios de celular", "query": "accesorios-celular", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "auriculares bluetooth", "path": "/tv-audio-y-video/tv-audio-y-video/auriculares-inalambricos", "volatilidad": "alta", "cupo": 8 },
+    { "nombre": "parlantes", "path": "/tv-audio-y-video/tv-audio-y-video/parlantes-portatiles", "volatilidad": "alta", "cupo": 8 },
+    { "nombre": "smartwatch", "path": "/celulares-y-tecnologia/celulares-y-tecnologia/relojes-inteligentes", "volatilidad": "alta", "cupo": 8 },
+    { "nombre": "airfryer", "path": "/electrodomesticos/coccion/freidoras", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "cafetera", "path": "/electrodomesticos/pequenos-de-cocina/cafeteras", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "teclado mecanico", "path": "/informatica/perifericos/teclado", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "monitor", "path": "/informatica/monitores", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "accesorios de celular", "path": "/celulares-y-tecnologia/accesorios-celulares", "volatilidad": "alta", "cupo": 6 },
 
-    { "nombre": "herramientas electricas", "query": "taladro-atornillador", "volatilidad": "media", "cupo": 5 },
-    { "nombre": "mancuernas", "query": "mancuernas", "volatilidad": "media", "cupo": 5 },
-    { "nombre": "secador de pelo", "query": "secador-de-pelo", "volatilidad": "media", "cupo": 4 },
+    { "nombre": "herramientas electricas - taladros", "path": "/ferreteria/herramientas/taladros", "volatilidad": "media", "cupo": 5 },
+    { "nombre": "herramientas electricas - amoladoras", "path": "/ferreteria/herramientas/amoladoras", "volatilidad": "media", "cupo": 5 },
+    { "nombre": "secador de pelo", "path": "/electrodomesticos/cuidado-personal/secador-de-pelo", "volatilidad": "media", "cupo": 5 },
 
-    { "nombre": "control - arroz", "query": "arroz-1-kg", "volatilidad": "control", "cupo": 1 },
-    { "nombre": "control - detergente", "query": "detergente-liquido", "volatilidad": "control", "cupo": 1 },
-    { "nombre": "control - pilas AA", "query": "pilas-aa", "volatilidad": "control", "cupo": 1 },
-    { "nombre": "control - libro", "query": "libro-fisico", "volatilidad": "control", "cupo": 1 },
-    { "nombre": "control - cuaderno", "query": "cuaderno-universitario", "volatilidad": "control", "cupo": 1 },
-    { "nombre": "control - cable USB", "query": "cable-usb-c", "volatilidad": "control", "cupo": 1 }
+    { "nombre": "control - cables y adaptadores", "path": "/celulares-y-tecnologia/accesorios-celulares/cables-y-adaptadores", "volatilidad": "control", "cupo": 3 },
+    { "nombre": "control - cargadores", "path": "/celulares-y-tecnologia/accesorios-celulares/cargadores", "volatilidad": "control", "cupo": 3 },
+    { "nombre": "control - fundas y protectores", "path": "/celulares-y-tecnologia/celulares-y-tecnologia/fundas-y-protectores", "volatilidad": "control", "cupo": 3 }
   ],
   "delay_min_segundos": 3,
   "delay_max_segundos": 6,
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  "_nota": "Pivot de MercadoLibre a AMV Store (amvstore.com.uy) el 15/8: ML bloquea toda automatizacion anonima (API y HTML) con un muro de cuenta obligatoria, confirmado desde IP residencial y desde GitHub Actions. AMV Store es tienda uruguaya real, robots.txt totalmente abierto, sin proteccion anti-bot."
 }
