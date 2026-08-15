@@ -1,0 +1,29 @@
+name: diagnostico-acceso-ml
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright && playwright install chromium --with-deps
+      - run: |
+          python - <<'EOF'
+          from playwright.sync_api import sync_playwright
+          UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          with sync_playwright() as p:
+              browser = p.chromium.launch(headless=True)
+              ctx = browser.new_context(user_agent=UA, viewport={"width":1366,"height":900}, locale="es-UY")
+              page = ctx.new_page()
+              resp = page.goto("https://listado.mercadolibre.com.uy/auriculares-bluetooth", wait_until="networkidle", timeout=30000)
+              print("STATUS:", resp.status)
+              print("FINAL_URL:", page.url)
+              print("TITLE:", page.title())
+              n = page.eval_on_selector_all("[class*='poly-component'], [class*='ui-search']", "els => els.length")
+              print("RESULT_ELEMENTS:", n)
+              browser.close()
+          EOF

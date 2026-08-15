@@ -1,0 +1,28 @@
+{
+  "sitio_base": "https://listado.mercadolibre.com.uy",
+  "objetivo_total_productos": 70,
+  "categorias": [
+    { "nombre": "auriculares bluetooth", "query": "auriculares-bluetooth", "volatilidad": "alta", "cupo": 8 },
+    { "nombre": "parlantes", "query": "parlante-bluetooth", "volatilidad": "alta", "cupo": 8 },
+    { "nombre": "smartwatch", "query": "smartwatch", "volatilidad": "alta", "cupo": 8 },
+    { "nombre": "airfryer", "query": "airfryer", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "cafetera", "query": "cafetera", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "teclado mecanico", "query": "teclado-mecanico", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "monitor", "query": "monitor-pc", "volatilidad": "alta", "cupo": 6 },
+    { "nombre": "accesorios de celular", "query": "accesorios-celular", "volatilidad": "alta", "cupo": 6 },
+
+    { "nombre": "herramientas electricas", "query": "taladro-atornillador", "volatilidad": "media", "cupo": 5 },
+    { "nombre": "mancuernas", "query": "mancuernas", "volatilidad": "media", "cupo": 5 },
+    { "nombre": "secador de pelo", "query": "secador-de-pelo", "volatilidad": "media", "cupo": 4 },
+
+    { "nombre": "control - arroz", "query": "arroz-1-kg", "volatilidad": "control", "cupo": 1 },
+    { "nombre": "control - detergente", "query": "detergente-liquido", "volatilidad": "control", "cupo": 1 },
+    { "nombre": "control - pilas AA", "query": "pilas-aa", "volatilidad": "control", "cupo": 1 },
+    { "nombre": "control - libro", "query": "libro-fisico", "volatilidad": "control", "cupo": 1 },
+    { "nombre": "control - cuaderno", "query": "cuaderno-universitario", "volatilidad": "control", "cupo": 1 },
+    { "nombre": "control - cable USB", "query": "cable-usb-c", "volatilidad": "control", "cupo": 1 }
+  ],
+  "delay_min_segundos": 3,
+  "delay_max_segundos": 6,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
