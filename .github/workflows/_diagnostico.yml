@@ -1,3 +1,4 @@
+# diagnostico de acceso: valida si Azure/GH Actions puede llegar a MercadoLibre
 name: diagnostico-acceso-ml
 on:
   workflow_dispatch: {}
